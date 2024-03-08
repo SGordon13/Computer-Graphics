@@ -1,0 +1,71 @@
+<!--
+Scott Gordon
+COMP 5460 Computer Graphics
+Assignment Four
+ortho2.html
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+<title>Assignment 4</title>
+</head>
+
+<script id="vertex-shader" type="x-shader/x-vertex">
+
+attribute  vec4 vPosition;
+attribute  vec4 vColor;
+varying vec4 fcolor;
+
+uniform mat4 modelViewMatrix;
+uniform mat4 projectionMatrix;
+
+void main() 
+{
+    gl_Position = projectionMatrix*modelViewMatrix*vPosition;
+    fcolor = vColor;
+} 
+</script>
+
+<script id="fragment-shader" type="x-shader/x-fragment">
+
+precision mediump float;
+
+varying vec4 fcolor;
+
+void
+main()
+{
+    gl_FragColor = fcolor;
+}
+</script>
+
+<body>
+<canvas id="gl-canvas" width="512" height="512">
+Oops ... your browser doesn't support the HTML5 canvas element
+</canvas>
+
+<div id="wrapper">
+	<div id="buttons">
+		<button type="button" id="runButton">Run</button>
+	</div><br><br>
+	<div id="coord1">
+		x1 <input id="x1" type="text" value="0" />
+		y1 <input id="y1" type="text" value="15" />
+		z1 <input id="z1" type="text" value="60" />
+	</div><br><br>
+	<div id="coord2">
+		x2 <input id="x2" type="input" value="16" />
+		y2 <input id="y2" type="input" value="15" />
+		z2 <input id="z2" type="input" value="60" />
+	</div><br><br>
+</div>
+
+<script type="text/javascript" src="./Common/webgl-utils.js"></script>
+<script type="text/javascript" src="./Common/initShaders.js"></script>
+<script type="text/javascript" src="./Common/MV.js"></script>
+<script type="text/javascript" src="ortho2.js"></script>
+
+</body>
+</html>

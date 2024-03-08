@@ -1,0 +1,50 @@
+<!--
+Scott Gordon
+COMP 5460
+Assignment Two
+gasket.html
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+<title>2D Sierpinski Gasket 2</title>
+</head>
+
+<body>
+<canvas id="gl-canvas" width="512" height="512">
+Oops ... your browser doesn't support the HTML5 canvas element
+</canvas>
+
+<div id="wrapper">
+	<div class="slidecontainer">
+		<p class="sliderControl" id="rangeValue">Points:</p>
+		<input
+			type="range"
+			min="500"
+			max="5000"
+			value="2750"
+			class="slider"
+			id="myRange"
+		/>
+	</div><br><br>
+	<div id="colorPicker">
+	<p class="rgbvaluesText">RGB (0-255): </p>
+		<input type="text" id="rInput" size="4"></input>
+		<input type="text" id="gInput" size="4"></input>
+		<input type="text" id="bInput" size="4"></input>
+	</div>
+	<div id="buttons">
+		<button type="button" id="displayButton">Display</button>
+		<button type="button" id="animateButton">Animate</button>
+		<button type="button" id="clearButton">Clear</button>
+	</div><br><br>
+	<p>Status: </p>
+	<p class="statusText"id="statusText">Display or Animate</p>
+</div>
+<script type="text/javascript" src="Common/webgl-utils.js"></script>
+<script type="text/javascript" src="Common/initShaders.js"></script>
+<script type="text/javascript" src="Common/MV.js"></script>
+<script type="text/javascript" src="gasket.js"></script>
+</body>
+</html>

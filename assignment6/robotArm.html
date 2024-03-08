@@ -1,0 +1,111 @@
+<!--
+Scott Gordon
+COMP 5460 Computer Graphics
+Assignment Six
+robotArm.html
+-->
+<html>
+
+<script id="vertex-shader" type="x-shader/x-vertex">
+attribute  vec4 vPosition;
+attribute  vec4 vColor;
+varying vec4 fColor;
+
+uniform mat4 modelViewMatrix;
+uniform mat4 projectionMatrix;
+
+void main()
+{
+    fColor = vColor;
+    gl_Position = projectionMatrix * modelViewMatrix * vPosition;
+}
+</script>
+
+<script id="fragment-shader" type="x-shader/x-fragment">
+
+precision mediump float;
+
+varying  vec4 fColor;
+
+void main()
+{
+    gl_FragColor = fColor;
+}
+</script>
+
+<script type="text/javascript" src="./Common/webgl-utils.js"></script>
+<script type="text/javascript" src="./Common/initShaders.js"></script>
+<script type="text/javascript" src="./Common/MV.js"></script>
+<script type="text/javascript" src="robotArm.js"></script>
+
+<canvas id="gl-canvas" width="512" height="512">
+Oops ... your browser doesn't support the HTML5 canvas element
+</canvas>
+
+<div>
+	finger3 angle1: -180 <input id="slider61" type="range"
+	min="-180" max="180" step="10" value="0"/>180
+	
+	&emsp;finger3 angle2: -180 <input id="slider62" type="range"
+	min="-180" max="180" step="10" value="0"/>180
+	
+	&emsp;finger3 angle3: -180 <input id="slider63" type="range"
+	min="-180" max="180" step="10" value="0"/>180
+</div><br/>
+
+<div>
+	finger2 angle1: -180 <input id="slider51" type="range"
+	min="-180" max="180" step="10" value="0"/>180
+	
+	&emsp;finger2 angle2: -180 <input id="slider52" type="range"
+	min="-180" max="180" step="10" value="0"/>180
+	
+	&emsp;finger2 angle3: -180 <input id="slider53" type="range"
+	min="-180" max="180" step="10" value="0"/>180
+</div><br/>
+
+<div>
+	finger1 angle1: -180 <input id="slider41" type="range"
+	min="-180" max="180" step="10" value="0"/>180
+	
+	&emsp;finger1 angle2: -180 <input id="slider42" type="range"
+	min="-180" max="180" step="10" value="0"/>180
+	
+	&emsp;finger1 angle3: -180 <input id="slider43" type="range"
+	min="-180" max="180" step="10" value="0"/>180
+</div><br/>
+
+<div>
+	upper arm angle1: -180 <input id="slider31" type="range"
+	min="-180" max="180" step="10" value="0"/>180
+	
+	&emsp;upper arm angle2: -180 <input id="slider32" type="range"
+	min="-180" max="180" step="10" value="0"/>180
+	
+	&emsp;upper arm angle3: -180 <input id="slider33" type="range"
+	min="-180" max="180" step="10" value="0"/>180
+</div><br/>
+
+<div>
+	lower arm angle1: -180 <input id="slider21" type="range"
+	min="-180" max="180" step="10" value="0"/>180
+	
+	&emsp;lower arm angle2: -180 <input id="slider22" type="range"
+	min="-180" max="180" step="10" value="0"/>180
+	
+	&emsp;lower arm angle3: -180 <input id="slider23" type="range"
+	min="-180" max="180" step="10" value="0"/>180
+</div><br/>
+
+<div>
+	body angle1: -180 <input id="slider11" type="range"
+	min="-180" max="180" step="10" value="0"/>180
+	
+	&emsp;body angle2: -180 <input id="slider12" type="range"
+	min="-180" max="180" step="10" value="0"/>180
+	
+	&emsp;body angle3: -180 <input id="slider13" type="range"
+	min="-180" max="180" step="10" value="0"/>180
+</div><br/>
+
+</html>

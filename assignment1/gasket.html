@@ -1,0 +1,39 @@
+<!--
+Scott Gordon
+COMP 5460
+Assignment One
+gasket.html
+
+Extra credit:
+slider that controls the speed of the animation
+found starting on line 24 of this document, more in js file
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+<title>2D Sierpinski Gasket</title>
+</head>
+
+<body>
+<canvas id="gl-canvas" width="512" height="512">
+Oops ... your browser doesn't support the HTML5 canvas element
+</canvas>
+<div style="text-align: left">
+	<p id="count">~</p>
+	<p class="sliderControl" id="spdRangeId">Speed:</p>
+	<input
+		type="range"
+		min="1"
+		max="500"
+		value="200"
+		class="slider"
+		id="spdRange"
+	/>
+</div>
+<script type="text/javascript" src="Common/webgl-utils.js"></script>
+<script type="text/javascript" src="Common/initShaders.js"></script>
+<script type="text/javascript" src="Common/MV.js"></script>
+<script type="text/javascript" src="gasket.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!--
+Scott Gordon
+COMP 5460
+Assignment Three
+assign3.html
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+<title>Assignment3</title>
+</head>
+
+<body>
+<canvas id="can" width="600" height="600">
+Oops ... your browser doesn't support the HTML5 canvas element
+</canvas>
+<p>
+  <label for="shapes">Choose a shape:</label>
+  <select name="shapes" id="shapes">
+    <option value="line">Line</option>
+    <option value="circle">Circle</option>
+    <option value="rectangle">Rectangle</option>
+    <option value="triangle">Triangle</option>
+	<option value="polygon">Polygon</option>
+  </select>
+</p>
+<form id = "functions">
+  <p>Select a function:</p>
+  <input type="radio" id="translate" name="function" value="translate" checked>
+  <label for="translate">Translate</label><br>
+  <input type="radio" id="scale" name="function" value="scale">
+  <label for="scale">Scale</label><br>
+  <input type="radio" id="rotate" name="function" value="rotate">
+  <label for="rotate">Rotate</label>
+</form>
+
+<!--<p id = tester>result test</p>-->
+
+<script type="text/javascript" src="assign3.js"></script>
+
+</body>
+</html>

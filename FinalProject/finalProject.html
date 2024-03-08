@@ -1,0 +1,68 @@
+<!--
+Scott Gordon
+COMP 5460
+Final Project
+finalProject.html
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+<title>Final Project</title>
+</head>
+
+<button type="button" id="newButton">New</button>
+<button type="button" id="saveButton">Save</button>
+<button type="button" id="loadButton">Load</button>
+<button type="button" id="saveAsImageButton">Save as Image</button>
+<button type="button" id="copyButton">Copy</button>
+<button type="button" id="pasteButton">Paste</button>
+<button type="button" id="undoButton">Undo</button>
+<br>
+
+<body>
+<canvas id="can" width="1000" height="600">
+Oops ... your browser doesn't support the HTML5 canvas element
+</canvas><br>
+
+<label for="shapes">Choose a shape:</label>
+<select name="shapes" id="shapes">
+	<option value="line">Line</option>
+	<option value="triangle">Triangle</option>
+	<option value="square">Square</option>
+	<option value="rectangle">Rectangle</option>
+	<option value="circle">Circle</option>
+	<option value="ellipse">Ellipse</option>
+	<option value="curve">Curve</option>
+	<option value="polyLine">Poly-Line</option>
+	<option value="polygon">Polygon</option>
+</select><br>
+
+<input type="color" id="sColor" name="sColor"
+	   value="#364e96">
+<label for="head">Color</label><br>
+<button type="button" id="endPolyLine">End Poly-Line</button>
+<button type="button" id="endPolygon">End Polygon</button><br><br>
+
+<form id = "functions">
+  Select a function:
+  <br><br>
+  <input type="radio" id="newShape" name="function" value="newShape" checked>
+  <label for="newShape">New Shape</label><br>
+  <input type="radio" id="select" name="function" value="select">
+  <label for="select">Select</label><br><br>
+  
+  <input type="radio" id="translate" name="function" value="translate">
+  <label for="translate">Translate</label><br>
+  <input type="radio" id="scale" name="function" value="scale">
+  <label for="scale">Scale</label><br>
+  <input type="radio" id="rotate" name="function" value="rotate">
+  <label for="rotate">Rotate</label>
+</form>
+
+<!--<p id = tester>result test</p>-->
+
+<script type="text/javascript" src="finalProject.js"></script>
+
+</body>
+</html>

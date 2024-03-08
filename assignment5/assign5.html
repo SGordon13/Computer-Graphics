@@ -1,0 +1,40 @@
+<!--
+Scott Gordon
+COMP 5460
+Assignment Five
+assign5.html
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+<title>Assignment5</title>
+</head>
+
+<body>
+<canvas id="can" width="600" height="600">
+Oops ... your browser doesn't support the HTML5 canvas element
+</canvas>
+<form id = "functions">
+  <p>Select a function:</p>
+  <input type="radio" id="ddaLine" name="function" value="ddaLine" checked>
+  <label for="translate">DDALine</label><br>
+  <input type="radio" id="midpointLine" name="function" value="midpointLine">
+  <label for="scale">MidpointLine</label><br>
+  <input type="radio" id="midpointCircle" name="function" value="midpointCircle">
+  <label for="rotate">MidpointCircle</label><br>
+  <input type="radio" id="midpointEllipse" name="function" value="midpointEllipse">
+  <label for="rotate">MidpointEllipse</label><br>
+  <br>
+  <input type="radio" id="bezierCurve" name="function" value="bezierCurve">
+  <label for="rotate">BezierCurve</label><br>
+  <input type="radio" id="hermiteCurve" name="function" value="hermiteCurve">
+  <label for="rotate">HermiteCurve</label><br>
+  <input type="radio" id="bSplineCurve" name="function" value="bSplineCurve">
+  <label for="rotate">B-SplineCurve</label>
+</form>
+
+<script type="text/javascript" src="assign5.js"></script>
+
+</body>
+</html>
